@@ -25,7 +25,7 @@ model Mor {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   users     User[]
-  name      String?  @map(name)
+  name      String?
 }
 
 model Login {
