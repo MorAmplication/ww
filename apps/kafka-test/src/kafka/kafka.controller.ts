@@ -2,5 +2,8 @@ import { EventPattern, Payload } from "@nestjs/microservices";
 
 export class KafkaController {
   @EventPattern("topic1")
-  async onTopic1(message: any): Promise<void> {}
+  async onTopic1(
+    @Payload()
+    message: KafkaMessage
+  ): Promise<void> {}
 }
